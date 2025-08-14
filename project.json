@@ -3,7 +3,7 @@
     "description": "Agama-LDAP-PW provides flow to password authenticate a person on remote LDAP server.",
     "type": "community",
     "author": "GluuFederation",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "authorWebsite": "https://github.com/GluuFederation/agama-ldap",
     "githubUri": "https://github.com/GluuFederation/agama-ldap",
     "license": "apache-2.0",
@@ -24,26 +24,42 @@
                     "configId": "ad_1",
                     "bindDN": "cn=directory manager",
                     "bindPassword": "encoded_pass",
-                    "servers": ["localhost:1389"],
+                    "servers": [
+                        "localhost:1389"
+                    ],
                     "maxConnections": 3,
                     "useSSL": false,
-                    "baseDNs": ["ou=people,o=gluu"],
-                    "loginAttributes": ["uid"],
-                    "localLoginAttributes": ["uid"]
-			     },
-			     {
+                    "baseDNs": [
+                        "ou=people,o=gluu"
+                    ],
+                    "loginAttributes": [
+                        "uid"
+                    ],
+                    "localLoginAttributes": [
+                        "uid"
+                    ]
+                },
+                {
                     "configId": "ad_2",
-                    "servers": ["localhost:2389"],
+                    "servers": [
+                        "localhost:2389"
+                    ],
                     "bindDN": "cn=directory manager",
                     "bindPassword": "encoded_pass",
                     "useSSL": false,
                     "maxConnections": 3,
-                    "baseDNs": ["ou=people,o=gluu"],
-                    "loginAttributes": ["mail"],
-                    "localLoginAttributes": ["mail"]
-			     }
-			 ]
-		}
+                    "baseDNs": [
+                        "ou=people,o=gluu"
+                    ],
+                    "loginAttributes": [
+                        "mail"
+                    ],
+                    "localLoginAttributes": [
+                        "mail"
+                    ]
+                }
+            ]
+        }
     },
     "name": "agama-ldap"
 }
